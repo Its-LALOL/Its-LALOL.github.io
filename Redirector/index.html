@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<body>
+		<meta charset="utf-8">
+		<title>Redirector</title>
+		<input name="url" type="text" placeholder="https://example.com">
+		<button type="submit" value="Generate URL" onClick='location.href="https://Its-LALOL.github.io/redirect?url="+btoa(url)'>Generate URL</button>
+</body>
+</html>
+<script>
+	var url=new URLSearchParams(window.location.search).get('url')
+	if (url!=null){
+		document.location.href=atob(url)
+}
+</script>
