@@ -1,4 +1,10 @@
 <!DOCTYPE html>
+<script>
+	var url=new URLSearchParams(window.location.search).get('url')
+	if (url!=null){
+		document.location.href=atob(url)
+}
+</script>
 <html>
 <body>
 		<meta charset="utf-8">
@@ -7,9 +13,3 @@
 		<button type="submit" value="Generate URL" onClick='document.write("https://Its-LALOL.github.io/Redirector?url="+btoa(document.getElementsByTagName("input")[0].value))'>Generate URL</button>
 </body>
 </html>
-<script>
-	var url=new URLSearchParams(window.location.search).get('url')
-	if (url!=null){
-		document.location.href=atob(url)
-}
-</script>
