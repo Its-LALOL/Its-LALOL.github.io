@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <script>
 	var url=new URLSearchParams(window.location.search).get('url')
-	if (url!=null){
-		document.location.href=atob(url)
+	if (url!=null) {
+		if (url!=''){
+			document.location.href=atob(url)
+		}
 }
 </script>
 <html>
